@@ -53,7 +53,7 @@ shared_examples_for "all static pages" do
     page.should have_selector 'title', text: full_title('')
     click_link "Sign up now!"
     page.should have_selector 'title', text: full_title('Sign up')
-    click_link "Try sample Twitter"
-    page.should have_selector 'title', text: full_title('')
+    # click_link "Try sample Twitter"
+    # page.should have_selector 'title', text: full_title('')
   end
 end
