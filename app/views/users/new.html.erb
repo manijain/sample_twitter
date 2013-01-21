@@ -1,12 +1,13 @@
 <% provide(:title, 'Sign up') %>
-<h1>welcome! and first register with Sign Up page</h1>
+<h1 id="right-margin">Sign Up</h1>
+<h2 id="right-margin">It’s free and always will be.</h2>
+<h2 id="left-margin"> you can connect with your friend by easy register.</h2>
 <div class= "row">
-   <div class= "span7">
+   <div class= "span8">
      <div class= "class-img">
      </div> 	
    </div>
-   <div class= "span5">
-		<h2>It’s free and always will be.</h2>
+   <div class= "span4">
 		<%= form_for(@user) do |f| %>
 		<%= render 'shared/error_messages' %>
 		<%= f.label :name %>

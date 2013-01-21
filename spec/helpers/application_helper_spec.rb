@@ -1,4 +1,5 @@
 require 'spec_helper'
+
 describe ApplicationHelper do
 
 	describe "full title" do
