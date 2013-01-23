@@ -1,14 +1,8 @@
 <% provide(:title, "Sign in") %>
 <h1 id="right-margin">Sign in</h1>
-
 <div class= "row">
-  <div class= "span8">
-  	<div class="sign-in" id="sign-in-img"><br>
-  		<h2> hey !... welcome to our team.. gud luck.</h2><br><br>
-  		<h3 id="big">GO..for sign-in !!!</h3>
-  	</div>
-  </div>
-	<div class= "span4">
+  <div class= "span8 user-signin-img img-circle"></div>
+	<div class= "span4 pull-right">
 		<%= form_tag sessions_path do %>
 		<%= label_tag :email %>
 		<%= text_field_tag :email %>
@@ -18,7 +12,6 @@
 
 		<%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
 		<% end %>
-
 	<p> New User? <%= link_to "Sign up now!", signup_path %></p>
 	</div>
 </div>

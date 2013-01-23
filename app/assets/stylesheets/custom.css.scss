@@ -32,18 +32,41 @@ textarea {
 	background: url("5.png");
 }
 
-.class-img {
-	background: url("social01.jpg");
+.home-bottom-img {
+	background: url("home-bottom.jpg");
 	background-repeat: no-repeat;
-	margin-top: 10px;
-	width: 550px;
-	height: 283px;
+	width: 900px;
+	height: 300px;
 }
 
-.sign-in {
-	background: url("5.png");
+.bottom{
+	margin-bottom: 2px;
+}
+
+.top {
+	margin-top: -10px;
+}
+
+.class-img {
+	background: url("home-bottom.jpg");
 	background-repeat: no-repeat;
-	margin-top: 20px;
+	margin-top: -15px;
+	width: 500px;
+	height: 330px;
+}
+
+.user-signin-img {
+	background: url("social01.jpg");
+	background-repeat: no-repeat;
+	margin-top: -20px;
+	width: 500px;
+	height: 300px;
+}
+
+.sign-in-page {
+	background: url("name7.jpg");
+	background-repeat: no-repeat;
+	margin-top: 10px;
 	width: 550px;
 	height: 283px;
 }
@@ -56,23 +79,39 @@ textarea {
 }
 
 #manish-name {
-	font-size: 30px;
+	font-size: 20px;
 	font-style: italic;
-	color: blue;
+	color: white;
+	margin-bottom: -20px;
 	text-align: right;
+}
+
+.bottom-margin2{
+	margin-bottom: -40px;
+	margin-top: 15px;
 }
 
 #idea{
 	color: white;
+	margin-bottom: 20px;
+}
+
+.top-margin1 {
+	margin-bottom: 30px;
+	margin-top: -30px;
 }
 
 .about-page-image{
 	background: url("manish.jpg");
 	background-repeat: no-repeat;
-	margin-top: 70px;
-	margin-left: 10px;
+	margin-top: -10px;
+	margin-left: -10px;
 	width: 150px;
 	height: 170px;
+}
+
+.icon-space {
+	margin-right: 20px;
 }
 
 /* typography */
@@ -94,7 +133,6 @@ h1 {
 	font-family: myFirstFont;
 	letter-spacing: -2px;
 	margin-bottom: 40px;
-	text-align:center;
 }
 
 h2 {
@@ -245,5 +283,33 @@ input {
     &:last-child {
       border-bottom: 1px solid $grayLighter;
     }
+  }
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
   }
 }
