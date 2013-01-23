@@ -32,19 +32,22 @@ textarea {
 	background: url("5.png");
 }
 
-.home-bottom-img {
-	background: url("home-bottom.jpg");
-	background-repeat: no-repeat;
-	width: 900px;
-	height: 300px;
-}
-
 .bottom{
 	margin-bottom: 2px;
 }
 
 .top {
 	margin-top: -10px;
+}
+
+.home-footer{
+	background: url("footer3.jpg");
+	background-repeat: no-repeat;
+	width: 550px;
+	height: 300px;
+	margin-left: 130px;
+	margin-bottom: -40px;
+	margin-top: -40px;
 }
 
 .class-img {
