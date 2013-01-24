@@ -43,9 +43,9 @@ textarea {
 .home-footer{
 	background: url("footer3.jpg");
 	background-repeat: no-repeat;
-	width: 550px;
-	height: 300px;
-	margin-left: 130px;
+	width: 600px;
+	height: 390px;
+	margin-left: 110px;
 	margin-bottom: -40px;
 	margin-top: -40px;
 }
@@ -314,5 +314,36 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
+  }
+}
+
+/* sidebar */
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
   }
 }
