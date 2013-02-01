@@ -71,5 +71,6 @@ SampleApp::Application.configure do
    domain: 'mydomain.com',
    authentication: :plain,
    user_name: "trysampletwitter@gmail.com",
-   password: "risingsun"
+   password: 'risingsun'
+  }
 end
