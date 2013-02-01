@@ -16,6 +16,7 @@ shared_examples_for "all static pages" do
     it_should_behave_like "all static pages"
     it { should_not have_selector 'title', text: '| home'}
 
+
     describe "for signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
       before do
@@ -24,6 +25,7 @@ shared_examples_for "all static pages" do
         sign_in user
         visit root_path
       end
+
       it "should render the user's feed" do
         user.feed.each do |item|
           page.should have_selector("li##{item.id}", text: item.content)
@@ -39,6 +41,14 @@ shared_examples_for "all static pages" do
 
         it { should have_link("0 following", href: following_user_path(user)) }
         it { should have_link("1 followers", href: followers_user_path(user)) }
+      end
+
+      describe "pagination" do
+        it "should paginate the feed" do
+          30.times { FactoryGirl.create(:micropost, user: user, content: "Consectetur adipiscing elit") }
+          visit root_path
+          page.should have_selector("div.pagination")
+        end
       end
     end
   end
