@@ -1,10 +1,16 @@
 <% provide(:title, 'All users') %>
-<h1 id="right-margin">All users</h1>
-
-<%= will_paginate %>
-
+<div class="row">
+	<div class="span4 pull-right">
+    <%= form_tag users_path, :method => :get do %>
+	    <%= text_field_tag :search, params[:search] %>
+	    <%= button_tag "Search", :name => nil %>
+  	<% end %>
+  </div>
+</div>
+<h1 class= "bottom-margin2", id="right-margin">All users</h1>
+	<%= will_paginate %>
 <ul class="users">
-   <%= render @users %>
+   	<%= render @users %>
 </ul>
 
-<%= will_paginate %>
+	<%= will_paginate %>

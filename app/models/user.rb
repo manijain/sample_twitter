@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
   has_secure_password
   has_many :microposts, dependent: :destroy
+  
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed 
 
@@ -46,10 +47,16 @@ class User < ActiveRecord::Base
     relationships.find_by_followed_id(other_user.id).destroy
   end
 
+  define_index do
+    indexes content
+    indexes :name
+    indexes microposts.content, :as => :micropost_content
+  end
 
 private
 
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
   end
+
 end
