@@ -6,9 +6,6 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'thinking-sphinx', '2.0.10',
-    :git => 'git://github.com/pat/thinking-sphinx.git',
-    :ref => '8f0e34b4a68494738d8dd5a1cb6bcf379adbf640'
 
 group :development, :test do
   gem 'mysql2'
